@@ -22,19 +22,10 @@ public class Enum {
         }
 
         switch(ss){
-            case Running:
-                System.out.println("All good");
-                break;
-            case Failed:
-                System.out.println("try again");
-                break;
-            case Pending:
-                System.out.println("Wait for it");
-                break;
-            default:
-                System.out.println("Come again");
-                break;
+            case Running -> System.out.println("All good");
+            case Failed -> System.out.println("try again");
+            case Pending -> System.out.println("Wait for it");
+            default -> System.out.println("Come again");
         }
     }
 }
-,

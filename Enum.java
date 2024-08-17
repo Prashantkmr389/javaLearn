@@ -2,10 +2,42 @@
 enum Status{
     Running, Failed, Pending, Success;
 }
+enum Laptop{
+    Macbook(200), XPS(2200), Surface(1500), Ideapad(200);
+    private int price;
+    private  Laptop(){
+        price = 500;
+    }
+    private Laptop(int price){
+        this.price = price;
+        System.out.println("in this " + this.name());
+    }
+    public int getPrice() {
+        return price;
+    }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+
+
+
+}
 
 public class Enum {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
+
+        Laptop lap = Laptop.Macbook;
+
+        System.out.println(lap.getPrice());
+
+
+        for(Laptop l : Laptop.values()){
+            System.out.println(l + " "+ l.getPrice());
+        }
         int i = 5;
+
+
         Status ss = Status.Running;
         System.out.println(ss);
         System.out.println(ss.ordinal());
